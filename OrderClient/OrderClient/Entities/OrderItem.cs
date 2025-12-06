@@ -14,5 +14,10 @@
             PriceItem = priceItem;
             Product = product;
         }
+
+        public double subTotal()
+        {
+            return QuantityItem * PriceItem;
+        }
     }
 }

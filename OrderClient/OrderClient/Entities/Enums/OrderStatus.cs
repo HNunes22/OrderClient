@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OrderClient.Entities.Enums
+﻿namespace OrderClient.Entities.Enums
 {
-    internal class OrderStatus
+    enum OrderStatus : int
     {
+        Peding_Payment,
+        Processing = 1,
+        Shipped = 2,
+        Delivered = 3
     }
 }
