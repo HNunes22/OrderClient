@@ -42,13 +42,13 @@ namespace OrderClient.Entities
             StringBuilder sb = new StringBuilder();
 
             sb.Append("Order Moment: ");
-            sb.AppendLine(Moment.ToString("dd/MM/yyyy hh/mm/ss"));
+            sb.AppendLine(Moment.ToString("dd/MM/yyyy hh:mm:ss"));
 
             sb.Append("Order Status: ");
             sb.AppendLine(Status.ToString());
 
             sb.Append("Client: ");
-            sb.AppendLine($"{Client.ClientName} {Client.BirthDate} - {Client.Email}");
+            sb.AppendLine($"{Client.ClientName} ({Client.BirthDate.ToString("dd/MM/yyyy")}) - {Client.Email}");
 
             sb.AppendLine("Order Items");
             foreach (OrderItem item in Items) {
